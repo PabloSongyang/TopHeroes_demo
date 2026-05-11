@@ -11,6 +11,8 @@ public class RewardObj : MonoBehaviour
 {
     public bool IsHitted => this.IsHit;
 
+    public PolygonRange PolygonRange => this.m_PolygonRange;
+
     [SerializeField]
     private SpriteGlow[] spriteGlows;
 
@@ -33,6 +35,12 @@ public class RewardObj : MonoBehaviour
 
     [SerializeField]
     private bool m_ActiveBoss;
+
+    [SerializeField]
+    private bool m_IsWeapon;
+
+    [SerializeField]
+    private PolygonRange m_PolygonRange;
 
     public void Init()
     {
@@ -59,6 +67,12 @@ public class RewardObj : MonoBehaviour
     {
         if (!this.IsHit)
         {
+            if (this.m_IsWeapon)
+            {
+                if (!SWGameManager.Instance.HittedRewardObj_weapon.Contains(this))
+                    SWGameManager.Instance.HittedRewardObj_weapon.Add(this);
+            }
+
             this.IsHit = true;
             this.StopBreathing();
             this.SpawnLoot();
@@ -81,6 +95,7 @@ public class RewardObj : MonoBehaviour
             if (this.m_ActiveBoss)
             {
                 SWGameManager.Instance.CurrentPlayer.IsActiveBoss = true;
+                SWGameManager.Instance.BossRange.HideWall();
             }
         }
     }
@@ -110,7 +125,7 @@ public class RewardObj : MonoBehaviour
                 GameObject go = PoolManager.Instance.RewardPool.Get(lootLevelInfo.GetPrefabLabel(), transform.position, Quaternion.identity);
                 rewardGoList.Add(go);
             }
- 
+
 
             // 寻找玩家
             GameObject player = SWGameManager.Instance.CurrentPlayer.gameObject;
@@ -129,7 +144,7 @@ public class RewardObj : MonoBehaviour
                         loot.transform.position += new Vector3(j * 1.25f, 0);
                     }
 
-                    loot.Initialize(this.transform.position, lootItemSo, loot, player.transform);
+                    loot.Initialize(this.transform.position, lootItemSo, loot, player.transform, this);
                 }
             }
         }

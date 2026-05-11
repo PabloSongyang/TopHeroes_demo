@@ -21,17 +21,19 @@ public class LootItem : MonoBehaviour, IPoolElement
     [SerializeField]
     private GameObject m_EffectGo;
 
+    private RewardObj m_RewardObj;
+
 
     public bool EatVaild => this.m_EatVaild;
     public GameObject RenderObject => this.gameObject;
 
-    public void Initialize(Vector3 createPosition, LootItemSo lootItemSo, LootItem lootItem, Transform playerTarget)
+    public void Initialize(Vector3 createPosition, LootItemSo lootItemSo, LootItem lootItem, Transform playerTarget, RewardObj rewardObj)
     {
         this.m_CreatePosition = createPosition;
         this.m_CurrentLootItemSo = lootItemSo;
         player = playerTarget;
 
-
+        this.m_RewardObj = rewardObj;
 
         this.GetRewards(lootItem);
     }
@@ -120,7 +122,7 @@ public class LootItem : MonoBehaviour, IPoolElement
     private void EatRewards(LootItemSo lootItemSo, LootItem lootItem)
     {
         if (player != null && lootItem.EatVaild)
-            player.GetComponent<Player>().GetRewards(lootItemSo, this.m_CreatePosition);
+            player.GetComponent<Player>().GetRewards(lootItemSo, this.m_CreatePosition, this.m_RewardObj);
 
         LootLevelInfo lootLevelInfo = null;
         if (lootItemSo.LootType == LootItemSo.Type.Equip)

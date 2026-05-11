@@ -87,6 +87,11 @@ public class EnemyHealth : MonoBehaviour, IDamage
 
     public void TakeDamage(IEntity target, int damage, Vector2 hitPosition, Vector2 hitDirection, float beatBackDis, SoundInfo hitSoundInfo, string hitEffectLabel = null)
     {
+        if (this.m_EnemyAI.EnemySo.IsBoss && !SWGameManager.Instance.CurrentPlayer.IsActiveBoss)
+        {
+            return;
+        }
+
         health -= damage;
 
         if (health < 0)

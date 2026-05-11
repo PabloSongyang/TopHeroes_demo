@@ -159,6 +159,7 @@ public class PlayerAutoAttack : MonoBehaviour
 
                                     if (this.m_CurrentIMeteorSkill.UltimateCompleted)
                                     {
+                                        Debug.Log("大招释放完毕。。。。。。。。");
                                         this.m_Player.CameraOrthographicSizeChangingLerp(this.m_Player.PlayerSo.DefaultCameraOrthographicSize, () =>
                                         {
                                             SWGameManager.Instance.OnPlayerChargedUpCompleteEvent.Send();
@@ -216,6 +217,12 @@ public class PlayerAutoAttack : MonoBehaviour
 
         foreach (var col in targetColliders)
         {
+            EnemyAI target = col.GetComponentInParent<EnemyAI>();
+            if (target != null && target.EnemySo.IsBoss && !SWGameManager.Instance.CurrentPlayer.IsActiveBoss)
+            {
+                continue;
+            }
+
             float dist = Vector2.Distance(transform.position, col.transform.position);
 
             // 优先逻辑：如果是敌人

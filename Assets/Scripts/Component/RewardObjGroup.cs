@@ -20,6 +20,7 @@ public class RewardObjGroup : MonoBehaviour
     private void OnGameRetryEvent(Transform initTransform)
     {
         this.m_RewardObjList.ForEach(_ => _.Init());
+        SWGameManager.Instance.HittedRewardObj_weapon.Clear();
     }
 
 #if UNITY_EDITOR

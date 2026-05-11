@@ -1,4 +1,5 @@
-﻿using UltimateDH;
+﻿using System.Collections.Generic;
+using UltimateDH;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -42,6 +43,8 @@ public class SWGameManager : MonoBehaviour
     [SerializeField]
     private RewardObjGroup m_RewardObjGroup;
 
+    private List<RewardObj> m_HittedRewardObj_weapon = new List<RewardObj>();
+
     /// <summary>
     /// 游戏开始
     /// </summary>
@@ -65,7 +68,7 @@ public class SWGameManager : MonoBehaviour
     /// <summary>
     /// 玩家武器升级时事件
     /// </summary>
-    public Message<int> OnPlayerWeaponUpgradeEvent = new Message<int>();
+    public Message<(int, RewardObj)> OnPlayerWeaponUpgradeEvent = new Message<(int, RewardObj)>();
 
     /// <summary>
     /// 玩家每升级一次蓄力射击完毕的事件
@@ -75,6 +78,8 @@ public class SWGameManager : MonoBehaviour
     public Dic<string, PolygonRange> EnemyCreatePolygonRangeDic = new Dic<string, PolygonRange>();
 
     public BossRange BossRange => this.m_BossRange;
+
+    public List<RewardObj> HittedRewardObj_weapon => this.m_HittedRewardObj_weapon;
 
     private void Awake()
     {

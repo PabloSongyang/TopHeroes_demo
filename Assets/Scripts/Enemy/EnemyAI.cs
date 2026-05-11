@@ -223,6 +223,8 @@ public class EnemyAI : MonoBehaviour, IPoolElement, IEntity
         {
             if (this.m_EnemySo.IsBoss)
             {
+                if (!SWGameManager.Instance.CurrentPlayer.IsActiveBoss) return;
+
                 if (!this.m_IsCanReleaseUltimateSkill)
                 {
                     this.m_UltimateSkillTimer += Time.deltaTime;

@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -46,13 +47,13 @@ public class MeteorAirborneMeteor : IMeteorSkill
             if (attackEntity.RenderObject.TryGetComponent<Player>(out Player player))
             {
                 PlayerLevelInfo playerLevelInfo = player.PlayerSo.GetPlayerLevelInfoByLevel(player.CurrentLevel);
-                PolygonRange polygonRange = SWGameManager.Instance.EnemyCreatePolygonRangeDic.Get(playerLevelInfo.EnemyCreatePolygonRangeName);
+                RewardObj rewardObj = SWGameManager.Instance.HittedRewardObj_weapon.LastOrDefault();
 
                 Debug.Log("释放火流星大招。。。");
 
                 if (playerLevelInfo.MeteorSkillSo != null)
                 {
-                    this.GenerateMeteorSkill(monoBehaviour, playerLevelInfo.MeteorSkillSo, polygonRange.transform.position, player.transform, Random.Range(.05f, .07f));
+                    this.GenerateMeteorSkill(monoBehaviour, playerLevelInfo.MeteorSkillSo, rewardObj.PolygonRange.transform.position, player.transform, Random.Range(.05f, .07f));
                 }
             }
         }
@@ -68,7 +69,6 @@ public class MeteorAirborneMeteor : IMeteorSkill
     /// <param name="itemInterval"></param>
     private void GenerateMeteorSkill(MonoBehaviour monoBehaviour, MeteorSkillSo meteorSkillSo, Vector3 targetPosition, Transform attacker, float itemInterval)
     {
-        this.m_UltimateCompleted = false;
         if (this.m_GenerateMeteorSkillCoroutine != null)
         {
             monoBehaviour.StopCoroutine(this.m_GenerateMeteorSkillCoroutine);
@@ -78,6 +78,7 @@ public class MeteorAirborneMeteor : IMeteorSkill
 
     private IEnumerator GenerateMeteorSkill_Coroutine(MeteorSkillSo meteorSkillSo, Vector3 targetPosition, Transform attacker, float itemInterval)
     {
+        this.m_UltimateCompleted = false;
         List<MeteorSkill> cache = new List<MeteorSkill>();
         for (int i = 0; i < meteorSkillSo.EffectCount; i++)
         {
@@ -92,7 +93,15 @@ public class MeteorAirborneMeteor : IMeteorSkill
             yield return new WaitForSeconds(itemInterval);
         }
 
-        yield return new WaitForSeconds(meteorSkillSo.LeftTime);
+        yield return new WaitUntil(() =>
+        {
+            bool b = true;
+            foreach (var item in cache)
+            {
+                b &= item.IsRecycle;
+            }
+            return b;
+        });
         this.m_UltimateCompleted = true;
     }
 }

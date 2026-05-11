@@ -126,7 +126,7 @@ public class Player : MonoBehaviour, IEntity
         this.m_CurrentLevel = level;
     }
 
-    public void GetRewards(LootItemSo lootItemSo, Vector3 createPosition)
+    public void GetRewards(LootItemSo lootItemSo, Vector3 createPosition, RewardObj rewardContent)
     {
         if (lootItemSo == null) return;
 
@@ -153,7 +153,7 @@ public class Player : MonoBehaviour, IEntity
             this.m_WeaponUpgradeEffect2.gameObject.SetActive(true);
             this.m_WeaponUpgradeEffect2.Play();
             this.m_CurrentLevel++;
-            SWGameManager.Instance.OnPlayerWeaponUpgradeEvent.Send(this.m_CurrentLevel);
+            SWGameManager.Instance.OnPlayerWeaponUpgradeEvent.Send((this.m_CurrentLevel, rewardContent));
             this.m_PlayerHealth.TakeDamage(this, -current.AddHP, this.transform.position, Vector2.zero, 0, null);
             if (this.m_PlayerSo.IsOpenChargeUp)
             {
@@ -203,8 +203,11 @@ public class Player : MonoBehaviour, IEntity
         if (this.IsStartChargingUp)
         {
             PlayerLevelInfo playerLevelInfo = this.m_PlayerSo.GetPlayerLevelInfoByLevel(this.m_CurrentLevel);
-            PolygonRange polygonRange = SWGameManager.Instance.EnemyCreatePolygonRangeDic.Get(playerLevelInfo.EnemyCreatePolygonRangeName);
-            transform.localScale = new Vector3(polygonRange.transform.position.x > this.transform.position.x ? -1 : 1, 1, 1);
+            RewardObj rewardObj = SWGameManager.Instance.HittedRewardObj_weapon.LastOrDefault();
+            if (rewardObj != null)
+            {
+                transform.localScale = new Vector3(rewardObj.PolygonRange.transform.position.x > this.transform.position.x ? -1 : 1, 1, 1);
+            }
         }
     }
 

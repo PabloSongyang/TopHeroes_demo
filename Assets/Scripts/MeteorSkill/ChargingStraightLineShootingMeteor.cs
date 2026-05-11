@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -22,14 +23,14 @@ public class ChargingStraightLineShootingMeteor : IMeteorSkill
             if (attackEntity.RenderObject.TryGetComponent<Player>(out Player player))
             {
                 PlayerLevelInfo playerLevelInfo = player.PlayerSo.GetPlayerLevelInfoByLevel(player.CurrentLevel);
-                PolygonRange polygonRange = SWGameManager.Instance.EnemyCreatePolygonRangeDic.Get(playerLevelInfo.EnemyCreatePolygonRangeName);
+                RewardObj rewardObj = SWGameManager.Instance.HittedRewardObj_weapon.LastOrDefault();
 
-                Vector2 base_fireDirection = (polygonRange.transform.position - player.transform.position).normalized;
+                Vector2 base_fireDirection = (rewardObj.PolygonRange.transform.position - player.transform.position).normalized;
 
                 string bulletEffectLabel = playerLevelInfo.UltimateBulletEffectLabel;
 
 
-                this.m_UltimateCompleted = false;
+    
                 this.UltimateShoot(monoBehaviour, attackEntity, bulletEffectLabel, player, base_fireDirection);
 
 
@@ -49,6 +50,7 @@ public class ChargingStraightLineShootingMeteor : IMeteorSkill
 
     private IEnumerator UltimateShootCoroutine(IEntity attackEntity, string bulletEffectLabel, Player player, Vector3 shootDirection)
     {
+        this.m_UltimateCompleted = false;
         int bulletCount = 3;
         float angleStep = 40f;
 
@@ -76,7 +78,16 @@ public class ChargingStraightLineShootingMeteor : IMeteorSkill
             }
         }
 
-        yield return new WaitUntil(() => bullets.Count == bulletCount);
+        yield return new WaitUntil(() =>
+        {
+            bool b = true;
+
+            foreach (var item in bullets)
+            {
+                b = Vector3.Distance(item.transform.position, player.transform.position) > 15;
+            }
+            return b;
+        });
         this.m_UltimateCompleted = true;
     }
 }

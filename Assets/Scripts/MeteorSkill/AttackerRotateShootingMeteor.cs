@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 /// <summary>
 /// 攻击者旋转射击
@@ -17,12 +18,12 @@ public class AttackerRotateShootingMeteor : IMeteorSkill
         {
             if (attackEntity.RenderObject.TryGetComponent<Player>(out Player player))
             {
-                this.m_UltimateCompleted = false;
+
 
                 PlayerLevelInfo playerLevelInfo = player.PlayerSo.GetPlayerLevelInfoByLevel(player.CurrentLevel);
-                PolygonRange polygonRange = SWGameManager.Instance.EnemyCreatePolygonRangeDic.Get(playerLevelInfo.EnemyCreatePolygonRangeName);
+                RewardObj rewardObj = SWGameManager.Instance.HittedRewardObj_weapon.LastOrDefault();
 
-                Vector2 base_fireDirection = (polygonRange.transform.position - player.transform.position).normalized;
+                Vector2 base_fireDirection = (rewardObj.PolygonRange.transform.position - player.transform.position).normalized;
 
                 string bulletEffectLabel = playerLevelInfo.BulletEffectLabel;
 
@@ -33,6 +34,7 @@ public class AttackerRotateShootingMeteor : IMeteorSkill
 
     private void Shoot(Player player, PlayerLevelInfo playerLevelInfo)
     {
+        this.m_UltimateCompleted = false;
         player.IsCanMove = false;
         int bulletCount = 5;
         float angleStep = 40f;

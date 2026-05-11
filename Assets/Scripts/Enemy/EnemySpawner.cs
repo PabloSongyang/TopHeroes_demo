@@ -1,9 +1,7 @@
-﻿using Cysharp.Threading.Tasks;
-using Pathfinding;
+﻿using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
-using Unity.VisualScripting.Antlr3.Runtime;
+using System.Linq;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -121,19 +119,19 @@ public class EnemySpawner : MonoBehaviour
         InvokeRepeating(nameof(GetRandomWalkablePos), 0, spawnRate);
     }
 
-    private void OnPlayerWeaponUpgradeEvent(int level)
+    private void OnPlayerWeaponUpgradeEvent((int level, RewardObj rewardContent) data)
     {
         CancelInvoke(nameof(GetRandomWalkablePos));
-        switch (level)
+        switch (data.level)
         {
             case 2:
-                this.SpawnInBatchStart(100, SWGameManager.Instance.CurrentPlayer.PlayerSo.SizeChangeSpeed, this.m_Player_Bullet_Arrow_Level2_Ultimate_EnemyCreatePolygonRange, .75f);
+                this.SpawnInBatchStart(100, SWGameManager.Instance.CurrentPlayer.PlayerSo.SizeChangeSpeed, data.rewardContent.PolygonRange, .75f);
                 break;
             case 3:
-                this.SpawnInBatchStart(100, SWGameManager.Instance.CurrentPlayer.PlayerSo.SizeChangeSpeed, this.m_Player_Bullet_Arrow_Level3_Ultimate_EnemyCreatePolygonRange, .75f);
+                this.SpawnInBatchStart(100, SWGameManager.Instance.CurrentPlayer.PlayerSo.SizeChangeSpeed, data.rewardContent.PolygonRange, .75f);
                 break;
             case 4:
-                this.SpawnInBatchStart(100, SWGameManager.Instance.CurrentPlayer.PlayerSo.SizeChangeSpeed, this.m_Player_Bullet_Max_EnemyCreatePolygonRange, .75f);
+                this.SpawnInBatchStart(100, SWGameManager.Instance.CurrentPlayer.PlayerSo.SizeChangeSpeed, data.rewardContent.PolygonRange, .75f);
                 break;
         }
     }
