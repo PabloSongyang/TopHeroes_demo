@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6716ecdac190fbe468a9e61b3c33aea6, type: 3}
+  m_Name: (Loot) Loot Item So_HP
+  m_EditorClassIdentifier: 
+  m_Type: 0
+  m_LootLevelInfos:
+  - NextLevel: 0
+    AddDamage: 0
+    SpineSkinName: 
+    AddHP: 250
+    PrefabLabelsList:
+    - LootItem_HP
+  m_EatSound:
+    m_Label: "\u5403\u8840\u836F"
+    m_AudioClip: {fileID: 8300000, guid: f07a9b24987b212488c88664933a3286, type: 3}

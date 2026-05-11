@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed99c4c21d0afff46b204168a7ab1e43, type: 3}
+  m_Name: (Enemy) Enemy1 So
+  m_EditorClassIdentifier: 
+  m_ID: 100
+  m_AIType: 0
+  m_IsBoss: 0
+  m_ObjectPoolLabel: Enemy1
+  m_HP: 9
+  m_Damage: 10
+  m_AttackRange: 1.2
+  m_AttackRate: 0.48
+  m_NormalAttackIndexList: 
+  m_HitFeedback: 1
+  m_TargetLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  m_BulletLabel: 
+  m_AASoundInfo:
+    m_Label: "\u5200\u780D1"
+    m_AudioClip: {fileID: 8300000, guid: e27b39f36292a464d9e5446d5c55dd9f, type: 3}
+  m_MeteorSkillSo: {fileID: 0}
+  m_MeteorSkillTypes: 
+  m_SpineSlotAttachmentInfosList: []

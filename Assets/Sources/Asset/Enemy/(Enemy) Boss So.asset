@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed99c4c21d0afff46b204168a7ab1e43, type: 3}
+  m_Name: (Enemy) Boss So
+  m_EditorClassIdentifier: 
+  m_ID: 101
+  m_AIType: 0
+  m_IsBoss: 1
+  m_ObjectPoolLabel: Boss
+  m_HP: 10000
+  m_Damage: 12
+  m_AttackRange: 10
+  m_AttackRate: 1
+  m_NormalAttackIndexList: 0100000003000000
+  m_HitFeedback: 0
+  m_TargetLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  m_BulletLabel: Boss_Bullet_Shoot
+  m_MeteorSkillSo: {fileID: 11400000, guid: 501f9e735f7064e4997705d718a835c7, type: 2}
+  m_MeteorSkillTypes: 0300000000000000
+  m_SpineSlotAttachmentInfosList: []

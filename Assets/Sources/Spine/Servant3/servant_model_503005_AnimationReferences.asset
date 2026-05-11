@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8971708336433657249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: attack_02
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 38c5aada5309e7f4786a111d96242efa, type: 2}
+  animationName: attack_02
+--- !u!114 &-3734839455205046791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: hit
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 38c5aada5309e7f4786a111d96242efa, type: 2}
+  animationName: hit
+--- !u!114 &-2162759555089636535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: walk
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 38c5aada5309e7f4786a111d96242efa, type: 2}
+  animationName: walk
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f30f83b4b98ce44cbae81286c0efac1, type: 3}
+  m_Name: servant_model_503005_AnimationReferences
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 38c5aada5309e7f4786a111d96242efa, type: 2}
+--- !u!114 &38625217466159624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: die
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 38c5aada5309e7f4786a111d96242efa, type: 2}
+  animationName: die
+--- !u!114 &1756462899811350872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: idle2
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 38c5aada5309e7f4786a111d96242efa, type: 2}
+  animationName: idle2
+--- !u!114 &1980687601944037943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: idle
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 38c5aada5309e7f4786a111d96242efa, type: 2}
+  animationName: idle
+--- !u!114 &6293403529707262163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: attack_01
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 38c5aada5309e7f4786a111d96242efa, type: 2}
+  animationName: attack_01

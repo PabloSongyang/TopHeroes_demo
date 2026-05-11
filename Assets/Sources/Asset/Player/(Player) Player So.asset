@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc63301ba6070454b9ff312d40574311, type: 3}
+  m_Name: (Player) Player So
+  m_EditorClassIdentifier: 
+  m_ID: 1
+  m_HP: 1000
+  m_IsOpenChargeUp: 1
+  m_ChargeUpTime: 1
+  m_DefaultCameraOrthographicSize: 6.5
+  m_ChargeUpCameraOrthographicSize: 10.5
+  m_SizeChangeSpeed: 4
+  m_PlayerLevelInfosList:
+  - Level: 1
+    UpgradeEffectName: Upgrade1
+    BulletEffectLabel: Player_Bullet_Arrow Level1
+    CurrentMeteorSkillType: 0
+    UltimateBulletEffectLabel: 
+    MeteorSkillSo: {fileID: 0}
+    EnemyCreatePolygonRangeName: 
+  - Level: 2
+    UpgradeEffectName: Upgrade1
+    BulletEffectLabel: Player_Bullet_Arrow Level2
+    CurrentMeteorSkillType: 4
+    UltimateBulletEffectLabel: Player_Bullet_Arrow Level2_Ultimate
+    MeteorSkillSo: {fileID: 0}
+    EnemyCreatePolygonRangeName: Player_Bullet_Arrow Level2_Ultimate EnemyCreatePos
+  - Level: 3
+    UpgradeEffectName: Upgrade2
+    BulletEffectLabel: Player_Bullet_Arrow Level3
+    CurrentMeteorSkillType: 0
+    UltimateBulletEffectLabel: Player_Bullet_Arrow Level3_Ultimate
+    MeteorSkillSo: {fileID: 11400000, guid: 8cbf3f86b375dfc49a52876344619c95, type: 2}
+    EnemyCreatePolygonRangeName: Player_Bullet_Arrow Level3_Ultimate EnemyCreatePos
+  - Level: 4
+    UpgradeEffectName: Upgrade2
+    BulletEffectLabel: Player_Bullet_Max
+    CurrentMeteorSkillType: 5
+    UltimateBulletEffectLabel: Player_Bullet_Max_Ultimate
+    MeteorSkillSo: {fileID: 11400000, guid: 126fc147667c6d24584b8fb7eee180de, type: 2}
+    EnemyCreatePolygonRangeName: Player_Bullet_Max EnemyCreatePos
+  m_SoundInfoList:
+  - m_Label: AttackBefore
+    m_AudioClip: {fileID: 8300000, guid: fb7bc33fdfac652478835f9e9565b8c4, type: 3}
+  - m_Label: AttackBefore_fast
+    m_AudioClip: {fileID: 8300000, guid: f971314a1fb41a74eaf6f3c622058efe, type: 3}
+  - m_Label: Shooting
+    m_AudioClip: {fileID: 8300000, guid: b6e8db8f63fa4a4418ca0f00d91f0b48, type: 3}
+  - m_Label: ChargingShooting
+    m_AudioClip: {fileID: 8300000, guid: c729f5e00cbb49742ac53837abf0ff45, type: 3}

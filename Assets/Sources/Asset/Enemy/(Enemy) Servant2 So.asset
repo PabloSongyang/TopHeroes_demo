@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed99c4c21d0afff46b204168a7ab1e43, type: 3}
+  m_Name: (Enemy) Servant2 So
+  m_EditorClassIdentifier: 
+  m_ID: 201
+  m_AIType: 1
+  m_IsBoss: 0
+  m_ObjectPoolLabel: Servant2
+  m_HP: 150
+  m_Damage: 0
+  m_AttackRange: 9
+  m_AttackRate: 0.2
+  m_NormalAttackIndexList: 
+  m_HitFeedback: 1
+  m_TargetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  m_BulletLabel: Servant2_Bullet
+  m_UltimateRadius: 4
+  m_UltimateMaxDamage: 200
+  m_IsUltimateReleaseTargetPosition: 1
+  m_MeteorSkillSo: {fileID: 11400000, guid: fa610bd7dc65b334e83e33e26e531c27, type: 2}
+  m_MeteorSkillTypes: 01000000
+  m_SpineSlotAttachmentInfosList: []

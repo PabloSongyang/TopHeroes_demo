@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2daa6fd9a4bfc4aa666161aced456e, type: 3}
+  m_Name: (Meteor Skill) Servant3_Meteor Skill So
+  m_EditorClassIdentifier: 
+  m_ID: 1
+  m_Label: Servant3_Bullet_Ultimate
+  m_Damage: 400
+  m_UltimateRadius: 3
+  m_Speed: 12
+  m_LeftTime: 0.7
+  m_EffectCount: 12
+  m_IsSplitDamage: 0
+  m_SpawnAreaSize: {x: 10, y: 5}
+  m_HeightOffset: 10
+  m_AOERadius: 2
+  m_IsUltimateReleaseTargetPosition: 1
+  m_HitLayer:
+    serializedVersion: 2
+    m_Bits: 448
+  m_HitEffectLabel: Servant3_Bullet_Ultimate_Impact
+  m_HitSoundInfo:
+    m_Label: "\u706B\u7403\u7206\u70B8"
+    m_AudioClip: {fileID: 8300000, guid: c729f5e00cbb49742ac53837abf0ff45, type: 3}

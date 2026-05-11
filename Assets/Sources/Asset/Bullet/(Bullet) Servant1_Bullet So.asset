@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae8de94ccc4f3e4c9dd6f9ad9fade06, type: 3}
+  m_Name: (Bullet) Servant1_Bullet So
+  m_EditorClassIdentifier: 
+  m_ID: 7
+  m_Label: Servant1_Bullet
+  m_Damage: 10
+  m_Speed: 15
+  m_LeftTime: 3
+  m_IsPenetrate: 1
+  m_BeatBackDistance: 0.8
+  m_AOERadius: 1
+  m_IsHitRewardBox: 0
+  m_HitLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  m_HitEffectLabel: 
+  m_HitSoundInfo:
+    m_Label: "\u5C0F\u706B\u7403\u7206\u70B8"
+    m_AudioClip: {fileID: 8300000, guid: 34f3954e158b34c45812eb7f79fa5aca, type: 3}
+  m_ChargeUpDamage: 0

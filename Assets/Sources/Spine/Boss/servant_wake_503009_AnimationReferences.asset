@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7948575614601914893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: attack_01
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: df617a6c3407c3b4ea3df6bdea0c3662, type: 2}
+  animationName: attack_01
+--- !u!114 &-6707855981750524537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: walk
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: df617a6c3407c3b4ea3df6bdea0c3662, type: 2}
+  animationName: walk
+--- !u!114 &-3557296586948500739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: die
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: df617a6c3407c3b4ea3df6bdea0c3662, type: 2}
+  animationName: die
+--- !u!114 &-1901391667030643847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: attack_03
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: df617a6c3407c3b4ea3df6bdea0c3662, type: 2}
+  animationName: attack_03
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f30f83b4b98ce44cbae81286c0efac1, type: 3}
+  m_Name: servant_wake_503009_AnimationReferences
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: df617a6c3407c3b4ea3df6bdea0c3662, type: 2}
+--- !u!114 &1760029458642879129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: idle
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: df617a6c3407c3b4ea3df6bdea0c3662, type: 2}
+  animationName: idle
+--- !u!114 &1903600182381343891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: idle2
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: df617a6c3407c3b4ea3df6bdea0c3662, type: 2}
+  animationName: idle2
+--- !u!114 &5623334720368148597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: hit
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: df617a6c3407c3b4ea3df6bdea0c3662, type: 2}
+  animationName: hit
+--- !u!114 &5954621828172893374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: attack_02
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: df617a6c3407c3b4ea3df6bdea0c3662, type: 2}
+  animationName: attack_02

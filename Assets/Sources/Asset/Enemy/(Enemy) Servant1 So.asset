@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed99c4c21d0afff46b204168a7ab1e43, type: 3}
+  m_Name: (Enemy) Servant1 So
+  m_EditorClassIdentifier: 
+  m_ID: 200
+  m_AIType: 1
+  m_IsBoss: 0
+  m_ObjectPoolLabel: Servant1
+  m_HP: 150
+  m_Damage: 0
+  m_AttackRange: 7
+  m_AttackRate: 0.2
+  m_NormalAttackIndexList: 
+  m_HitFeedback: 1
+  m_TargetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  m_BulletLabel: Servant1_Bullet
+  m_UltimateRadius: 3
+  m_UltimateMaxDamage: 600
+  m_IsUltimateReleaseTargetPosition: 0
+  m_MeteorSkillSo: {fileID: 11400000, guid: 28c5ac3642f94de4183b97b5f1f3769b, type: 2}
+  m_MeteorSkillTypes: 02000000
+  m_SpineSlotAttachmentInfosList:
+  - m_Label: Default
+    m_SpineSlotAttachmentList:
+    - m_SpineSlotName: 01_47
+      m_SpineAttachmentName:
+      - 01_32
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_47
+      m_SpineAttachmentName:
+      - 1000
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_47
+      m_SpineAttachmentName:
+      - chuizi2
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_44
+      m_SpineAttachmentName:
+      - 01_32
+      m_IsVisible: 1
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_44
+      m_SpineAttachmentName:
+      - 1000
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_44
+      m_SpineAttachmentName:
+      - chuizi2
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+  - m_Label: AttackIndex_1
+    m_SpineSlotAttachmentList:
+    - m_SpineSlotName: 01_47
+      m_SpineAttachmentName:
+      - 01_32
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_47
+      m_SpineAttachmentName:
+      - 1000
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_47
+      m_SpineAttachmentName:
+      - chuizi2
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_44
+      m_SpineAttachmentName:
+      - 01_32
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_44
+      m_SpineAttachmentName:
+      - 1000
+      m_IsVisible: 0
+      m_ForceUpdate: 0
+    - m_SpineSlotName: 01_44
+      m_SpineAttachmentName:
+      - chuizi2
+      m_IsVisible: 0
+      m_ForceUpdate: 0

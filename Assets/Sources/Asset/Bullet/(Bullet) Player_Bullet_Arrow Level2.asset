@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae8de94ccc4f3e4c9dd6f9ad9fade06, type: 3}
+  m_Name: (Bullet) Player_Bullet_Arrow Level2
+  m_EditorClassIdentifier: 
+  m_ID: 2
+  m_Label: Player_Bullet_Arrow Level2
+  m_Damage: 20
+  m_Speed: 25
+  m_LeftTime: 2
+  m_IsPenetrate: 1
+  m_BeatBackDistance: 0.8
+  m_AOERadius: 0
+  m_IsHitRewardBox: 1
+  m_HitLayer:
+    serializedVersion: 2
+    m_Bits: 1088
+  m_HitEffectLabel: 
+  m_HitSoundInfo:
+    m_Label: 
+    m_AudioClip: {fileID: 0}
+  m_ChargeUpDamage: 0
