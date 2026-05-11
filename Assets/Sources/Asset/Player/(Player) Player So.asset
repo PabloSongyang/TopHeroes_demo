@@ -16,8 +16,10 @@ MonoBehaviour:
   m_HP: 1000
   m_IsOpenChargeUp: 1
   m_ChargeUpTime: 1
-  m_DefaultCameraOrthographicSize: 6.5
-  m_ChargeUpCameraOrthographicSize: 10.5
+  m_DefaultCameraOrthographicSize_L: 6.5
+  m_ChargeUpCameraOrthographicSize_L: 12.5
+  m_DefaultCameraOrthographicSize_P: 8.5
+  m_ChargeUpCameraOrthographicSize_P: 20.5
   m_SizeChangeSpeed: 4
   m_PlayerLevelInfosList:
   - Level: 1

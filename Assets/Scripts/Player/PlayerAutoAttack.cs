@@ -134,7 +134,7 @@ public class PlayerAutoAttack : MonoBehaviour
                             break;
 
                         case 1:
-                            this.m_Player.CameraOrthographicSizeChangingLerp(this.m_Player.PlayerSo.ChargeUpCameraOrthographicSize);
+                            this.m_Player.CameraOrthographicSizeChangingLerp(UIManager.Instance.IsScreenLandspace ? this.m_Player.PlayerSo.ChargeUpCameraOrthographicSize_L : this.m_Player.PlayerSo.ChargeUpCameraOrthographicSize_P);
                             this.m_ChargeUpTimer += Time.deltaTime;
                             if (this.m_ChargeUpTimer > this.m_Player.PlayerSo.ChargeUpTime)
                             {
@@ -160,7 +160,7 @@ public class PlayerAutoAttack : MonoBehaviour
                                     if (this.m_CurrentIMeteorSkill.UltimateCompleted)
                                     {
                                         Debug.Log("大招释放完毕。。。。。。。。");
-                                        this.m_Player.CameraOrthographicSizeChangingLerp(this.m_Player.PlayerSo.DefaultCameraOrthographicSize, () =>
+                                        this.m_Player.CameraOrthographicSizeChangingLerp(UIManager.Instance.IsScreenLandspace ? this.m_Player.PlayerSo.DefaultCameraOrthographicSize_L : this.m_Player.PlayerSo.DefaultCameraOrthographicSize_P, () =>
                                         {
                                             SWGameManager.Instance.OnPlayerChargedUpCompleteEvent.Send();
                                             this.m_Player.IsStartChargingUp = false;

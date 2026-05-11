@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
+    public bool IsScreenLandspace => this.m_IsScreenLandspace;
+
     [SerializeField]
     private GameObject m_Input;
 

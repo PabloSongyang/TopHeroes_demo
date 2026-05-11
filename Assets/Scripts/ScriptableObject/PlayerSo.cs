@@ -24,9 +24,13 @@ public class PlayerSo : ScriptableObject
     public float ChargeUpTime => this.m_ChargeUpTime;
     public List<PlayerLevelInfo> PlayerLevelInfosList => this.m_PlayerLevelInfosList;
 
-    public float DefaultCameraOrthographicSize => this.m_DefaultCameraOrthographicSize;
+    public float DefaultCameraOrthographicSize_L => this.m_DefaultCameraOrthographicSize_L;
 
-    public float ChargeUpCameraOrthographicSize => this.m_ChargeUpCameraOrthographicSize;
+    public float ChargeUpCameraOrthographicSize_L => this.m_ChargeUpCameraOrthographicSize_L;
+
+    public float DefaultCameraOrthographicSize_P => this.m_DefaultCameraOrthographicSize_P;
+
+    public float ChargeUpCameraOrthographicSize_P => this.m_ChargeUpCameraOrthographicSize_P;
     public float SizeChangeSpeed => this.m_SizeChangeSpeed;
     public bool IsOpenChargeUp => this.m_IsOpenChargeUp;
 
@@ -43,10 +47,16 @@ public class PlayerSo : ScriptableObject
     private float m_ChargeUpTime;
 
     [SerializeField, Tooltip("默认时相机视口尺寸"), Min(0)]
-    private float m_DefaultCameraOrthographicSize = 6.5f;
+    private float m_DefaultCameraOrthographicSize_L = 6.5f;
 
     [SerializeField, Tooltip("蓄力时相机视口尺寸"), Min(0)]
-    private float m_ChargeUpCameraOrthographicSize = 10.5f;
+    private float m_ChargeUpCameraOrthographicSize_L = 10.5f;
+
+    [SerializeField, Tooltip("默认时相机视口尺寸"), Min(0)]
+    private float m_DefaultCameraOrthographicSize_P = 8.5f;
+
+    [SerializeField, Tooltip("蓄力时相机视口尺寸"), Min(0)]
+    private float m_ChargeUpCameraOrthographicSize_P = 18.5f;
 
     [SerializeField, Range(0, 10f)]
     private float m_SizeChangeSpeed;

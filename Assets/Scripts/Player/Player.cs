@@ -108,7 +108,7 @@ public class Player : MonoBehaviour, IEntity
         this.m_WeaponUpgradeEffect.gameObject.SetActive(false);
         this.m_WeaponUpgradeEffect2.gameObject.SetActive(false);
         LensSettings lensSettings = SWGameManager.Instance.CinemachineCamera.Lens;
-        lensSettings.OrthographicSize = this.m_PlayerSo.DefaultCameraOrthographicSize;
+        lensSettings.OrthographicSize = Screen.width > Screen.height ? this.m_PlayerSo.DefaultCameraOrthographicSize_L : this.m_PlayerSo.DefaultCameraOrthographicSize_P;
         SWGameManager.Instance.CinemachineCamera.Lens = lensSettings;
         this.m_CurrentSpineAnimationEvent.Animator.SetInteger("ChargeUpType", 0);
         this.m_CurrentSpineAnimationEvent.Animator.SetBool("IsChargeUp", false);

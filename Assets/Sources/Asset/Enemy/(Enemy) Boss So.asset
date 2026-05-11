@@ -16,7 +16,7 @@ MonoBehaviour:
   m_AIType: 0
   m_IsBoss: 1
   m_ObjectPoolLabel: Boss
-  m_HP: 10000
+  m_HP: 20000
   m_Damage: 12
   m_AttackRange: 10
   m_AttackRate: 1
@@ -25,7 +25,11 @@ MonoBehaviour:
   m_TargetLayer:
     serializedVersion: 2
     m_Bits: 512
+  m_UseAnimationMixed: 0
   m_BulletLabel: Boss_Bullet_Shoot
+  m_AASoundInfo:
+    m_Label: 
+    m_AudioClip: {fileID: 0}
   m_MeteorSkillSo: {fileID: 11400000, guid: 501f9e735f7064e4997705d718a835c7, type: 2}
   m_MeteorSkillTypes: 0300000000000000
   m_SpineSlotAttachmentInfosList: []
